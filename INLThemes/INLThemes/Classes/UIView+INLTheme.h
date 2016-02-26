@@ -12,16 +12,16 @@
 
 @protocol INLThemedView <NSObject>
 
-@property (nonatomic) NSString * elementId;
+@property (nonatomic) NSString * __nonnull elementId;
 
--(void)applyTheme:(INLThemeElement *)theme;
+-(void)applyTheme:(INLThemeElement * __nonnull)theme;
 
 @end
 
 
 @interface UIView (INLTheme)<INLThemedView>
 
-@property (nonatomic) IBInspectable NSString * elementId;
+@property (nonatomic) IBInspectable NSString * __nonnull elementId;
 
 @end
 

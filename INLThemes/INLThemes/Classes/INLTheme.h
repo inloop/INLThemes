@@ -10,9 +10,9 @@
 
 @interface INLTheme : NSObject
 
-@property (strong, nonatomic) NSDictionary<NSString *, INLThemeElement *> * uiElements;
+@property (strong, nonatomic) NSDictionary<NSString *, INLThemeElement *> * __nonnull uiElements;
 
-+(instancetype)themeWithPlist:(NSString *)plistName;
++(instancetype __nonnull)themeWithPlist:(NSString * __nonnull)plistName;
 // TODO: themeWithJSON
 
 @end

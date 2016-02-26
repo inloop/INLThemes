@@ -13,12 +13,12 @@
 
 @interface INLThemeService : NSObject
 
-+(instancetype)sharedService;
++(instancetype __nonnull)sharedService;
 
-+(void)registerThemeConsumer:(id<INLThemeConsumer>)themeConsumer;
-+(void)removeThemeConsumer:(id<INLThemeConsumer>)themeConsumer;
++(void)registerThemeConsumer:(id<INLThemeConsumer> __nonnull)themeConsumer;
++(void)removeThemeConsumer:(id<INLThemeConsumer> __nonnull)themeConsumer;
 
-+(void)applyTheme:(INLTheme *)theme;
-+(void)applyTheme:(INLTheme *)theme to:(id<INLThemeConsumer>)themeConsumer;
++(void)applyTheme:(INLTheme * __nonnull)theme;
++(void)applyTheme:(INLTheme * __nonnull)theme to:(id<INLThemeConsumer> __nonnull)themeConsumer;
 
 @end

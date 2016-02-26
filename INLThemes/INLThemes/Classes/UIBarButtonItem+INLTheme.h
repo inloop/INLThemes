@@ -10,6 +10,6 @@
 
 @interface UIBarButtonItem (INLTheme)<INLThemedView>
 
-@property (nonatomic) IBInspectable NSString * elementId;
+@property (nonatomic) IBInspectable NSString * __nonnull elementId;
 
 @end

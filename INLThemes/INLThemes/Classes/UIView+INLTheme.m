@@ -25,32 +25,32 @@ synthesizeElementId
 @end
 
 
-@implementation UIButton (INLTheme)
-
--(void)applyTheme:(INLThemeElement *)theme {
-	NSString * color = [theme valueForKey:@"color"];
-	if (color) {
-		self.imageView.tintColor = [UIColor colorWithHex:color];
-	}
-	NSString * backgroundColor = [theme valueForKey:@"backgroundColor"];
-	if (backgroundColor) {
-		self.backgroundColor = [UIColor colorWithHex:backgroundColor];
-	}
-	NSString * textColor = [theme valueForKey:@"textColor"];
-	if (textColor) {
-		[self setTitleColor:[UIColor colorWithHex:textColor] forState:UIControlStateNormal];
-	}
-	NSString * text = [theme valueForKey:@"text"];
-	if (text) {
-		[self setTitle:text forState:UIControlStateNormal];
-	}
-	NSString * image = [theme valueForKey:@"image"];
-	if (image) {
-		[self setImage:[INLAssetService imageNamed:image] forState:UIControlStateNormal];
-	}
-}
-
-@end
+//@implementation UIButton (INLTheme)
+//
+//-(void)applyTheme:(INLThemeElement *)theme {
+//	NSString * color = [theme valueForKey:@"color"];
+//	if (color) {
+//		self.imageView.tintColor = [UIColor colorWithHex:color];
+//	}
+//	NSString * backgroundColor = [theme valueForKey:@"backgroundColor"];
+//	if (backgroundColor) {
+//		self.backgroundColor = [UIColor colorWithHex:backgroundColor];
+//	}
+//	NSString * textColor = [theme valueForKey:@"textColor"];
+//	if (textColor) {
+//		[self setTitleColor:[UIColor colorWithHex:textColor] forState:UIControlStateNormal];
+//	}
+//	NSString * text = [theme valueForKey:@"text"];
+//	if (text) {
+//		[self setTitle:text forState:UIControlStateNormal];
+//	}
+//	NSString * image = [theme valueForKey:@"image"];
+//	if (image) {
+//		[self setImage:[INLAssetService imageNamed:image] forState:UIControlStateNormal];
+//	}
+//}
+//
+//@end
 
 
 @implementation UIImageView (INLTheme)

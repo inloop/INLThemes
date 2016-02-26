@@ -12,20 +12,20 @@
 
 @protocol INLThemeConsumer<NSObject>
 
--(NSArray<id<INLThemedView>> *)themedViews;
+-(NSArray<id<INLThemedView>> * __nonnull)themedViews;
 
 @end
 
 
 @interface UIViewController (INLThemeConsumer)<INLThemeConsumer>
 
--(NSArray<id<INLThemedView>> *)themedViews;
+-(NSArray<id<INLThemedView>> * __nonnull)themedViews;
 
 @end
 
 
 @interface UIView (INLThemeConsumer)<INLThemeConsumer>
 
--(NSArray<id<INLThemedView>> *)themedViews;
+-(NSArray<id<INLThemedView>> * __nonnull)themedViews;
 
 @end

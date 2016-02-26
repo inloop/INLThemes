@@ -5,30 +5,30 @@
 	<key>main.backgroundView</key>
 	<dict>
 		<key>backgroundColor</key>
-		<string>#000066</string>
+		<string>#006600</string>
 	</dict>
 	<key>main.centerButton</key>
 	<dict>
 		<key>text</key>
-		<string>Change theme</string>
+		<string>Switch theme</string>
 		<key>textColor</key>
-		<string>#008800</string>
+		<string>#000088</string>
 	</dict>
 	<key>main.topLabel</key>
 	<dict>
 		<key>textColor</key>
-		<string>#cc0011</string>
+		<string>#00bb11</string>
 	</dict>
 	<key>main.bottomButton</key>
 	<dict>
 		<key>cornerRadius</key>
-		<integer>10</integer>
+		<integer>15</integer>
 		<key>backgroundColor</key>
-		<string>#0044aa</string>
+		<string>#00aa44</string>
 		<key>textColor</key>
-		<string>#ffffff</string>
+		<string>#bbbbbb</string>
 		<key>text</key>
-		<string>Bule button</string>
+		<string>Green button</string>
 	</dict>
 </dict>
 </plist>

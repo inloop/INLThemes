@@ -94,14 +94,8 @@
 		C32118F91C7F229900DFE155 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				C32118FA1C7F229900DFE155 /* AppDelegate.swift */,
-				C32118FC1C7F229900DFE155 /* ViewController.swift */,
-				C32118FE1C7F229900DFE155 /* Main.storyboard */,
-				C32119011C7F229900DFE155 /* Assets.xcassets */,
-				C32119031C7F229900DFE155 /* LaunchScreen.storyboard */,
-				C32119061C7F229900DFE155 /* Info.plist */,
-				C32119131C7F2A9D00DFE155 /* BlueTheme.plist */,
-				C32568E41C7FABBF004F9627 /* GreenTheme.plist */,
+				C39782861C803714006372F0 /* Classes */,
+				C39782871C80371B006372F0 /* Resources */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -112,6 +106,52 @@
 				C32568DE1C7FAAE7004F9627 /* INLThemes.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C39782861C803714006372F0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C32118FA1C7F229900DFE155 /* AppDelegate.swift */,
+				C32118FC1C7F229900DFE155 /* ViewController.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		C39782871C80371B006372F0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C32119011C7F229900DFE155 /* Assets.xcassets */,
+				C39782891C803736006372F0 /* Configuration */,
+				C39782881C803728006372F0 /* Storyboards */,
+				C397828A1C803742006372F0 /* Themes */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C39782881C803728006372F0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C32118FE1C7F229900DFE155 /* Main.storyboard */,
+				C32119031C7F229900DFE155 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		C39782891C803736006372F0 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				C32119061C7F229900DFE155 /* Info.plist */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		C397828A1C803742006372F0 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				C32119131C7F2A9D00DFE155 /* BlueTheme.plist */,
+				C32568E41C7FABBF004F9627 /* GreenTheme.plist */,
+			);
+			name = Themes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

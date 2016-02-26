@@ -17,3 +17,6 @@ FOUNDATION_EXPORT const unsigned char INLThemesVersionString[];
 #import "UIBarButtonItem+INLTheme.h"
 #import "UIView+INLTheme.h"
 #import "UIViewController+INLThemeConsumer.h"
+
+#import "UIColor+Hex.h"
+#import "INLAssetService.h"
