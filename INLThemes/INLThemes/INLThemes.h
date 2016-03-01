@@ -12,7 +12,6 @@ FOUNDATION_EXPORT double INLThemesVersionNumber;
 FOUNDATION_EXPORT const unsigned char INLThemesVersionString[];
 
 #import "INLTheme.h"
-#import "INLThemeService.h"
 #import "INLThemeElement.h"
 #import "UIBarButtonItem+INLTheme.h"
 #import "UIView+INLTheme.h"

@@ -6,25 +6,42 @@
 //
 
 #import "INLTheme.h"
-#import "INLThemeService.h"
 #import "INLThemeElement.h"
 
 @implementation INLTheme
 
-+(instancetype)themeWithPlist:(NSString *)plistName {
-	INLTheme * theme = [[INLTheme alloc] init];
-	NSMutableDictionary * uiElements = [@{} mutableCopy];
+-(instancetype)initWithThemeDict:(NSDictionary *)themeDict {
 
+	if (self = [super init]) {
+		NSMutableDictionary * uiElements = [@{} mutableCopy];
+		for (NSString * elementId in themeDict.keyEnumerator) {
+			uiElements[elementId] = [INLThemeElement elementWithDictionary:themeDict[elementId]];
+		}
+		self.uiElements = uiElements;
+	}
+	return self;
+}
+
++(instancetype)themeWithPlist:(NSString *)plistName {
+
+	NSDictionary * themeDict = nil;
 	NSString * plistPath = [[NSBundle mainBundle] pathForResource:plistName ofType:@"plist"];
 	if (plistPath) {
-		NSDictionary * dict = [NSDictionary dictionaryWithContentsOfFile:plistPath];
-
-		for (NSString * elementId in dict.keyEnumerator) {
-			uiElements[elementId] = [INLThemeElement elementWithDictionary:dict[elementId]];
-		}
+		themeDict = [NSDictionary dictionaryWithContentsOfFile:plistPath];
 	}
-	theme.uiElements = uiElements;
-	return theme;
+	return [[INLTheme alloc] initWithThemeDict:themeDict];
 }
+
++(instancetype)themeWithJSONData:(NSData *)jsonData {
+
+	NSDictionary * themeDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
+	return [[INLTheme alloc] initWithThemeDict:themeDict];
+}
+
++(instancetype)themeWithJSON:(NSString *)json {
+
+	return [self themeWithJSONData:[json dataUsingEncoding:NSUTF8StringEncoding]];
+}
+
 
 @end

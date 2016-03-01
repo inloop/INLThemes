@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C365B4851C85872D00CB2906 /* INLThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C365B4841C85872D00CB2906 /* INLThemeService.swift */; };
+		C365B4891C858FA600CB2906 /* INLThemeElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C365B4881C858FA600CB2906 /* INLThemeElement.swift */; };
 		C39782831C802F8D006372F0 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39782821C802F8D006372F0 /* UIViewExtensions.swift */; };
 		C3ACD9D61C7D7C9700809570 /* INLThemes.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ACD9D51C7D7C9700809570 /* INLThemes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3ACD9E21C7D8CAF00809570 /* UIColor+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ACD9E01C7D8CAF00809570 /* UIColor+Hex.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -15,8 +17,6 @@
 		C3ACD9F11C7D8D9800809570 /* INLTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ACD9E51C7D8D9800809570 /* INLTheme.m */; };
 		C3ACD9F21C7D8D9800809570 /* INLThemeElement.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ACD9E61C7D8D9800809570 /* INLThemeElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3ACD9F31C7D8D9800809570 /* INLThemeElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ACD9E71C7D8D9800809570 /* INLThemeElement.m */; };
-		C3ACD9F41C7D8D9800809570 /* INLThemeService.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ACD9E81C7D8D9800809570 /* INLThemeService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C3ACD9F51C7D8D9800809570 /* INLThemeService.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ACD9E91C7D8D9800809570 /* INLThemeService.m */; };
 		C3ACD9F61C7D8D9800809570 /* UIBarButtonItem+INLTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ACD9EA1C7D8D9800809570 /* UIBarButtonItem+INLTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3ACD9F71C7D8D9800809570 /* UIBarButtonItem+INLTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ACD9EB1C7D8D9800809570 /* UIBarButtonItem+INLTheme.m */; };
 		C3ACD9F81C7D8D9800809570 /* UIView+INLTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ACD9EC1C7D8D9800809570 /* UIView+INLTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C365B4841C85872D00CB2906 /* INLThemeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = INLThemeService.swift; path = Classes/INLThemeService.swift; sourceTree = "<group>"; };
+		C365B4881C858FA600CB2906 /* INLThemeElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = INLThemeElement.swift; path = Classes/INLThemeElement.swift; sourceTree = "<group>"; };
 		C39782821C802F8D006372F0 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = Classes/UIViewExtensions.swift; sourceTree = "<group>"; };
 		C3ACD9D21C7D7C9700809570 /* INLThemes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = INLThemes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3ACD9D51C7D7C9700809570 /* INLThemes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INLThemes.h; sourceTree = "<group>"; };
@@ -38,8 +40,6 @@
 		C3ACD9E51C7D8D9800809570 /* INLTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = INLTheme.m; path = Classes/INLTheme.m; sourceTree = "<group>"; };
 		C3ACD9E61C7D8D9800809570 /* INLThemeElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = INLThemeElement.h; path = Classes/INLThemeElement.h; sourceTree = "<group>"; };
 		C3ACD9E71C7D8D9800809570 /* INLThemeElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = INLThemeElement.m; path = Classes/INLThemeElement.m; sourceTree = "<group>"; };
-		C3ACD9E81C7D8D9800809570 /* INLThemeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = INLThemeService.h; path = Classes/INLThemeService.h; sourceTree = "<group>"; };
-		C3ACD9E91C7D8D9800809570 /* INLThemeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = INLThemeService.m; path = Classes/INLThemeService.m; sourceTree = "<group>"; };
 		C3ACD9EA1C7D8D9800809570 /* UIBarButtonItem+INLTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+INLTheme.h"; path = "Classes/UIBarButtonItem+INLTheme.h"; sourceTree = "<group>"; };
 		C3ACD9EB1C7D8D9800809570 /* UIBarButtonItem+INLTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+INLTheme.m"; path = "Classes/UIBarButtonItem+INLTheme.m"; sourceTree = "<group>"; };
 		C3ACD9EC1C7D8D9800809570 /* UIView+INLTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+INLTheme.h"; path = "Classes/UIView+INLTheme.h"; sourceTree = "<group>"; };
@@ -68,8 +68,8 @@
 				C3ACD9E51C7D8D9800809570 /* INLTheme.m */,
 				C3ACD9E61C7D8D9800809570 /* INLThemeElement.h */,
 				C3ACD9E71C7D8D9800809570 /* INLThemeElement.m */,
-				C3ACD9E81C7D8D9800809570 /* INLThemeService.h */,
-				C3ACD9E91C7D8D9800809570 /* INLThemeService.m */,
+				C365B4881C858FA600CB2906 /* INLThemeElement.swift */,
+				C365B4841C85872D00CB2906 /* INLThemeService.swift */,
 				C3ACD9EA1C7D8D9800809570 /* UIBarButtonItem+INLTheme.h */,
 				C3ACD9EB1C7D8D9800809570 /* UIBarButtonItem+INLTheme.m */,
 				C3ACD9EC1C7D8D9800809570 /* UIView+INLTheme.h */,
@@ -77,6 +77,7 @@
 				C39782821C802F8D006372F0 /* UIViewExtensions.swift */,
 				C3ACD9EE1C7D8D9800809570 /* UIViewController+INLThemeConsumer.h */,
 				C3ACD9EF1C7D8D9800809570 /* UIViewController+INLThemeConsumer.m */,
+				C3C8E46C1C7F0F9C00835F56 /* Services */,
 			);
 			name = ThemeModule;
 			sourceTree = "<group>";
@@ -111,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				C32118ED1C7F20EC00DFE155 /* ThemeModule */,
-				C3C8E46C1C7F0F9C00835F56 /* Services */,
 				C3ACD9DF1C7D8C2D00809570 /* Extensions */,
 			);
 			name = Classes;
@@ -150,7 +150,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3ACD9F41C7D8D9800809570 /* INLThemeService.h in Headers */,
 				C3ACD9E21C7D8CAF00809570 /* UIColor+Hex.h in Headers */,
 				C3ACD9F81C7D8D9800809570 /* UIView+INLTheme.h in Headers */,
 				C3ACD9FA1C7D8D9800809570 /* UIViewController+INLThemeConsumer.h in Headers */,
@@ -232,12 +231,13 @@
 				C3C8E4701C7F0FEB00835F56 /* INLAssetService.m in Sources */,
 				C3ACD9E31C7D8CAF00809570 /* UIColor+Hex.m in Sources */,
 				C3ACD9FB1C7D8D9800809570 /* UIViewController+INLThemeConsumer.m in Sources */,
+				C365B4891C858FA600CB2906 /* INLThemeElement.swift in Sources */,
 				C3ACD9F11C7D8D9800809570 /* INLTheme.m in Sources */,
 				C3ACD9F71C7D8D9800809570 /* UIBarButtonItem+INLTheme.m in Sources */,
 				C3ACD9F31C7D8D9800809570 /* INLThemeElement.m in Sources */,
 				C3ACD9F91C7D8D9800809570 /* UIView+INLTheme.m in Sources */,
 				C39782831C802F8D006372F0 /* UIViewExtensions.swift in Sources */,
-				C3ACD9F51C7D8D9800809570 /* INLThemeService.m in Sources */,
+				C365B4851C85872D00CB2906 /* INLThemeService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +340,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/INLThemes/Resources",
@@ -363,6 +364,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/INLThemes/Resources",

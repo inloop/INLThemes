@@ -1,0 +1,41 @@
+//
+//  INLThemeElement.swift
+//  INLThemes
+//
+//  Created by Tomas Hakel on 01/03/2016.
+//  Copyright © 2016 Inloop. All rights reserved.
+//
+
+import Foundation
+
+extension INLThemeElement {
+
+	public subscript (elementId:String) -> String? {
+		return values[elementId] as? String
+	}
+
+	public func string(elementId: String) -> String? {
+		return self[elementId]
+	}
+
+	public func number(elementId: String) -> Double? {
+		guard let number = values[elementId] as? NSNumber
+			else { return nil }
+
+		return Double(number)
+	}
+
+	public func color(elementId: String) -> UIColor? {
+		guard let color = self[elementId]
+			else { return nil }
+
+		return UIColor(hex: color)
+	}
+
+	public func image(elementId: String) -> UIImage? {
+		guard let image = self[elementId]
+			else { return nil }
+
+		return INLAssetService.imageNamed(image)
+	}
+}

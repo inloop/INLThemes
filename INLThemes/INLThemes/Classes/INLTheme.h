@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSDictionary<NSString *, INLThemeElement *> * __nonnull uiElements;
 
 +(instancetype __nonnull)themeWithPlist:(NSString * __nonnull)plistName;
-// TODO: themeWithJSON
++(instancetype __nonnull)themeWithJSONData:(NSData * __nonnull)jsonData;
++(instancetype __nonnull)themeWithJSON:(NSString * __nonnull)json;
 
 @end
