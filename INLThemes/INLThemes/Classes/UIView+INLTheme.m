@@ -16,6 +16,7 @@
 synthesizeElementId
 
 -(void)applyTheme:(INLThemeElement *)theme {
+
 	NSString * backgroundColorHex = [theme valueForKey:@"backgroundColor"];
 	if (backgroundColorHex) {
 		self.backgroundColor = [UIColor colorWithHex:backgroundColorHex];
@@ -48,7 +49,8 @@ synthesizeElementId
 @implementation NSObject (INLThemable)
 
 -(BOOL)isThemable {
-	return [self conformsToProtocol:@protocol(INLThemedView)];
+	return [self conformsToProtocol:@protocol(INLThemedView)]
+		&& [(id<INLThemedView>)self elementId] != nil;
 }
 
 @end

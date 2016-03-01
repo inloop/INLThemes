@@ -38,10 +38,15 @@
 	return [[INLTheme alloc] initWithThemeDict:themeDict];
 }
 
++(instancetype)themeWithJSONFile:(NSString *)jsonName {
+
+	NSString * jsonPath = [[NSBundle mainBundle] pathForResource:jsonName ofType:@"json"];
+	return [self themeWithJSONData:[NSData dataWithContentsOfFile:jsonPath]];
+}
+
 +(instancetype)themeWithJSON:(NSString *)json {
 
 	return [self themeWithJSONData:[json dataUsingEncoding:NSUTF8StringEncoding]];
 }
-
 
 @end

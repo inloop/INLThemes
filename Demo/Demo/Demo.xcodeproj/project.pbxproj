@@ -16,6 +16,7 @@
 		C32568DF1C7FAAFC004F9627 /* INLThemes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32568DE1C7FAAE7004F9627 /* INLThemes.framework */; };
 		C32568E01C7FAAFC004F9627 /* INLThemes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C32568DE1C7FAAE7004F9627 /* INLThemes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C32568E51C7FABBF004F9627 /* GreenTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = C32568E41C7FABBF004F9627 /* GreenTheme.plist */; };
+		C365B48C1C85CDB300CB2906 /* RedTheme.json in Resources */ = {isa = PBXBuildFile; fileRef = C365B48B1C85CDB300CB2906 /* RedTheme.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		C32119131C7F2A9D00DFE155 /* BlueTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlueTheme.plist; sourceTree = "<group>"; };
 		C32568D91C7FAAE7004F9627 /* INLThemes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = INLThemes.xcodeproj; path = ../../INLThemes/INLThemes.xcodeproj; sourceTree = "<group>"; };
 		C32568E41C7FABBF004F9627 /* GreenTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GreenTheme.plist; sourceTree = "<group>"; };
+		C365B48B1C85CDB300CB2906 /* RedTheme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RedTheme.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			children = (
 				C32119131C7F2A9D00DFE155 /* BlueTheme.plist */,
 				C32568E41C7FABBF004F9627 /* GreenTheme.plist */,
+				C365B48B1C85CDB300CB2906 /* RedTheme.json */,
 			);
 			name = Themes;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				C32568E51C7FABBF004F9627 /* GreenTheme.plist in Resources */,
 				C32119141C7F2A9D00DFE155 /* BlueTheme.plist in Resources */,
 				C32119051C7F229900DFE155 /* LaunchScreen.storyboard in Resources */,
+				C365B48C1C85CDB300CB2906 /* RedTheme.json in Resources */,
 				C32119021C7F229900DFE155 /* Assets.xcassets in Resources */,
 				C32119001C7F229900DFE155 /* Main.storyboard in Resources */,
 			);

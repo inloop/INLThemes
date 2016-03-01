@@ -14,6 +14,7 @@
 
 +(instancetype __nonnull)themeWithPlist:(NSString * __nonnull)plistName;
 +(instancetype __nonnull)themeWithJSONData:(NSData * __nonnull)jsonData;
++(instancetype __nonnull)themeWithJSONFile:(NSString * __nonnull)jsonName;
 +(instancetype __nonnull)themeWithJSON:(NSString * __nonnull)json;
 
 @end

@@ -38,4 +38,11 @@ extension INLThemeElement {
 
 		return INLAssetService.imageNamed(image)
 	}
+
+	public func font() -> UIFont? {
+		guard let fontName = self["font"], let fontSize = self.number("fontSize")
+			else { return nil }
+
+		return UIFont(name: fontName, size: CGFloat(fontSize))
+	}
 }

@@ -22,9 +22,15 @@ class ViewController: UIViewController {
 
 	var i = 0
 	@IBAction func changeThemeButton() {
-		let theme = i++ % 2 == 0 ? "BlueTheme" : "GreenTheme"
+		let theme = {
+			switch self.i++ % 3 {
+			case 0: return INLTheme(plist: "BlueTheme")
+			case 1: return INLTheme(JSONFile: "RedTheme")
+			default: return INLTheme(plist: "GreenTheme")
+			}
+		}() as INLTheme
 
-		INLThemeService.applyTheme(INLTheme(plist: theme))
+		INLThemeService.applyTheme(theme)
 	}
 }
 

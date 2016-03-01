@@ -9,9 +9,31 @@
 #import "UIColor+Hex.h"
 #import "INLAssetService.h"
 
-@implementation UIBarButtonItem (INLTheme)
+@implementation UIBarItem (INLTheme)
 
 synthesizeElementId
+
+-(void)applyTheme:(INLThemeElement *)theme {
+
+}
+
+@end
+
+
+@implementation UITabBarItem (INLTheme)
+
+-(void)applyTheme:(INLThemeElement *)theme {
+
+	NSString * title = [theme valueForKey:@"title"];
+	if (title) {
+		self.title = title;
+	}
+}
+
+@end
+
+
+@implementation UIBarButtonItem (INLTheme)
 
 - (NSNumber *)hasThemeGeneratedCustomView {
 	return objc_getAssociatedObject(self, @selector(hasThemeGeneratedCustomView));

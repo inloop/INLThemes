@@ -1,0 +1,28 @@
+{
+	"tabbar": {
+		"tintColor": "#ee0000",
+		"barTintColor": "#330000"
+	},
+	"tabbar.firstItem": {
+		"title": "Red"
+	},
+
+	"main.backgroundView": {
+		"backgroundColor": "#660000"
+	},
+	"main.centerButton": {
+		"text": "Replace theme",
+		"textColor": "#008822",
+		"font": "Baskerville",
+		"fontSize": 32
+	},
+	"main.topLabel": {
+		"textColor": "#ee7777"
+	},
+	"main.bottomButton": {
+		"cornerRadius": 3,
+		"backgroundColor": "#aa2222",
+		"textColor": "#cccccc",
+		"text": "Red button"
+	}
+}

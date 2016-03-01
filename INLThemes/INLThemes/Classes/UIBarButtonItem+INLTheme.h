@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "UIView+INLTheme.h"
 
-@interface UIBarButtonItem (INLTheme)<INLThemedView>
+@interface UIBarItem (INLTheme)<INLThemedView>
 
 @property (nonatomic) IBInspectable NSString * __nonnull elementId;
 

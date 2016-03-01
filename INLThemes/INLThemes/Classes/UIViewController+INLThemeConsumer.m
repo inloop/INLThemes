@@ -13,6 +13,7 @@
 -(NSArray<id<INLThemedView>> *)themedViews {
 	NSMutableArray<id<INLThemedView>> * themedViews = [[self.view themedViews] mutableCopy];
 	[self collectNavbarThemableViewsInto:themedViews];
+	[self collectTabbarThemableViewsInto:themedViews];
 	return themedViews;
 }
 
@@ -30,8 +31,14 @@
 }
 
 -(void)collectTabbarThemableViewsInto:(NSMutableArray<id<INLThemedView>> *)themedViews {
-
-	// TODO: style tabbar
+	if ([self.tabBarController.tabBar isThemable]) {
+		[themedViews addObject:(id)self.tabBarController.tabBar];
+	}
+	for (UIViewController * tabVC in self.tabBarController.viewControllers) {
+		if ([tabVC.tabBarItem isThemable]) {
+			[themedViews addObject:(id)tabVC.tabBarItem];
+		}
+	}
 }
 
 @end

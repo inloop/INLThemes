@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>tabbar</key>
+	<dict>
+		<key>tintColor</key>
+		<string>#0000ee</string>
+		<key>barTintColor</key>
+		<string>#000033</string>
+	</dict>
+	<key>tabbar.firstItem</key>
+	<dict>
+		<key>title</key>
+		<string>Blue</string>
+	</dict>
 	<key>main.backgroundView</key>
 	<dict>
 		<key>backgroundColor</key>
@@ -9,15 +21,19 @@
 	</dict>
 	<key>main.centerButton</key>
 	<dict>
+		<key>font</key>
+		<string>Helvetica</string>
+		<key>fontSize</key>
+		<integer>12</integer>
 		<key>text</key>
 		<string>Change theme</string>
 		<key>textColor</key>
-		<string>#008800</string>
+		<string>#880000</string>
 	</dict>
 	<key>main.topLabel</key>
 	<dict>
 		<key>textColor</key>
-		<string>#cc0011</string>
+		<string>#4444ee</string>
 	</dict>
 	<key>main.bottomButton</key>
 	<dict>

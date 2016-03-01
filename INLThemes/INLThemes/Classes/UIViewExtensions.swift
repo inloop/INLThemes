@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 extension UIButton {
 	public override func applyTheme(theme: INLThemeElement) {
 		super.applyTheme(theme)
@@ -23,6 +24,9 @@ extension UIButton {
 		}
 		if let image = theme.image("image") {
 			self.setImage(image, forState: .Normal)
+		}
+		if let font = theme.font() {
+			self.titleLabel?.font = font
 		}
 	}
 }
@@ -49,6 +53,9 @@ extension UILabel {
 		if let textColor = theme.color("textColor") {
 			self.textColor = textColor
 		}
+		if let font = theme.font() {
+			self.font = font
+		}
 	}
 }
 
@@ -64,7 +71,17 @@ extension UIPageControl {
 			self.pageIndicatorTintColor = inactiveColor
 		}
 	}
+}
 
+
+extension UITabBar {
+	public override func applyTheme(theme: INLThemeElement) {
+		super.applyTheme(theme)
+
+		if let barTintColor = theme.color("barTintColor") {
+			self.barTintColor = barTintColor
+		}
+	}
 }
 
 
@@ -85,6 +102,9 @@ extension UITextField {
 		if let inactiveColor = theme.color("inactiveColor"), placeholder = self.placeholder {
 			self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSForegroundColorAttributeName: inactiveColor])
 		}
+		if let font = theme.font() {
+			self.font = font
+		}
 	}
 }
 
@@ -98,6 +118,9 @@ extension UITextView {
 		}
 		if let textColor = theme.color("textColor") {
 			self.textColor = textColor
+		}
+		if let font = theme.font() {
+			self.font = font
 		}
 	}
 }
