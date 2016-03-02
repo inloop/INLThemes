@@ -32,6 +32,9 @@
 		"font": "Baskerville",
 		"fontSize": 25
 	},
+	"main.toplabel.xOffset": {
+		"constant": 15
+	},
 	"main.bottomButton": {
 		"cornerRadius": 3,
 		"backgroundColor": "#aa2222",

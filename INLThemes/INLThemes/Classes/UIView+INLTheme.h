@@ -33,6 +33,13 @@
 @end
 
 
+@interface NSLayoutConstraint (INLTheme)<INLThemedView>
+
+@property (nonatomic) IBInspectable NSString * __nonnull elementId;
+
+@end
+
+
 #define synthesizeElementId \
 	- (NSString *)elementId { \
 		return objc_getAssociatedObject(self, @selector(elementId)); \

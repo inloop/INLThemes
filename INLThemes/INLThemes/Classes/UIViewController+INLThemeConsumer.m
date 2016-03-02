@@ -54,6 +54,7 @@
 	if ([self isThemable]) {
 		[themedViews addObject:(id)self];
 	}
+	[self collectLayoutConstraintsInto:themedViews];
 	[self collectStylableViewsInView:self into:themedViews];
 	return themedViews;
 }
@@ -63,7 +64,16 @@
 		if ([view isThemable]) {
 			[themedViews addObject:(id)view];
 		}
+		[view collectLayoutConstraintsInto:themedViews];
 		[self collectStylableViewsInView:view into:themedViews];
+	}
+}
+
+-(void)collectLayoutConstraintsInto:(NSMutableArray<id<INLThemedView>> *)themedViews {
+	for (NSLayoutConstraint * constraint in self.constraints) {
+		if ([constraint isThemable]) {
+			[themedViews addObject:constraint];
+		}
 	}
 }
 

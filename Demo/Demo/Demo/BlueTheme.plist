@@ -57,6 +57,11 @@
 		<key>fontSize</key>
 		<integer>10</integer>
 	</dict>
+	<key>main.toplabel.xOffset</key>
+	<dict>
+		<key>constant</key>
+		<string>0</string>
+	</dict>
 	<key>main.bottomButton</key>
 	<dict>
 		<key>cornerRadius</key>

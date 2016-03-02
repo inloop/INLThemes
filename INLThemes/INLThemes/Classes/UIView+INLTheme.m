@@ -46,6 +46,31 @@ synthesizeElementId
 @end
 
 
+@implementation NSLayoutConstraint (INLTheme)
+
+synthesizeElementId
+
+-(void)applyTheme:(INLThemeElement *)theme {
+
+	NSNumber * active = theme.values[@"active"];
+	if (active) {
+		self.active = [active boolValue];
+	}
+
+	NSNumber * constant = theme.values[@"constant"];
+	if (constant) {
+		self.constant = [constant floatValue];
+	}
+
+	NSNumber * priority = theme.values[@"priority"];
+	if (priority) {
+		self.priority = [priority integerValue];
+	}
+}
+
+@end
+
+
 @implementation NSObject (INLThemable)
 
 -(BOOL)isThemable {
