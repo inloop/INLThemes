@@ -28,6 +28,12 @@ synthesizeElementId
 	if (title) {
 		self.title = title;
 	}
+
+	NSString * imageSrc = [theme valueForKey:@"image"];
+	if (imageSrc) {
+		self.selectedImage = [INLAssetService imageNamed:imageSrc];
+		self.image = [INLAssetService imageNamed:imageSrc];
+	}
 }
 
 @end

@@ -1,10 +1,20 @@
 {
+	"navbar": {
+		"tintColor": "#ff8888",
+		"barTintColor": "#880000"
+	},
+
 	"tabbar": {
 		"tintColor": "#ee0000",
 		"barTintColor": "#330000"
 	},
-	"tabbar.firstItem": {
-		"title": "Red"
+	"tabbar.main": {
+		"title": "Red",
+		"image": "pallette"
+	},
+	"tabbar.black": {
+		"title": "Black",
+		"image": "pallette"
 	},
 
 	"main.backgroundView": {
@@ -17,12 +27,30 @@
 		"fontSize": 32
 	},
 	"main.topLabel": {
-		"textColor": "#ee7777"
+		"textColor": "#ee7777",
+		"text": "Red theme",
+		"font": "Baskerville",
+		"fontSize": 25
 	},
 	"main.bottomButton": {
 		"cornerRadius": 3,
 		"backgroundColor": "#aa2222",
 		"textColor": "#cccccc",
 		"text": "Red button"
+	},
+
+	"black.backgroundView": {
+		"backgroundColor": "#111111"
+	},
+
+	"table.tableview": {
+		"separatorColor": "#880000",
+		"backgroundColor": "#111111"
+	},
+	"table.cell": {
+		"selectedBackgroundColor": "#ff8888"
+	},
+	"table.cellTitle": {
+		"textColor": "#880000"
 	}
 }

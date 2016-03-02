@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,15 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MB-DX-4Z4">
-                                <rect key="frame" x="277" y="550" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MB-DX-4Z4">
+                                <rect key="frame" x="277" y="501" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="elementId" value="main.bottomButton"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etA-kv-6zt">
-                                <rect key="frame" x="20" y="28" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etA-kv-6zt">
+                                <rect key="frame" x="20" y="28" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -51,6 +52,8 @@
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4MB-DX-4Z4" secondAttribute="bottom" constant="20" id="1gO-MW-hNA"/>
                             <constraint firstItem="4MB-DX-4Z4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3gW-o8-PdP"/>
+                            <constraint firstItem="etA-kv-6zt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Mqy-n8-9gm"/>
+                            <constraint firstItem="etA-kv-6zt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="P2k-fb-HNh"/>
                             <constraint firstItem="Dac-oj-Ad1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bwO-L6-Uew"/>
                             <constraint firstItem="Dac-oj-Ad1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="grG-YZ-V4a"/>
                         </constraints>
@@ -58,15 +61,121 @@
                             <userDefinedRuntimeAttribute type="string" keyPath="elementId" value="main.backgroundView"/>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <tabBarItem key="tabBarItem" image="pallete" id="5LR-pN-uGh">
+                    <tabBarItem key="tabBarItem" id="5LR-pN-uGh">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="elementId" value="tabbar.firstItem"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="elementId" value="tabbar.main"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055" y="267"/>
+            <point key="canvasLocation" x="1057" y="-107"/>
+        </scene>
+        <!--Black View Controller-->
+        <scene sceneID="Z6W-Lp-fiM">
+            <objects>
+                <viewController id="HLv-Z1-mNU" customClass="BlackViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Wd-kM-zpt"/>
+                        <viewControllerLayoutGuide type="bottom" id="wsg-05-7A3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KMd-hA-6Ij">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O32-PG-bnU">
+                                <rect key="frame" x="249" y="285" width="103" height="30"/>
+                                <state key="normal" title="Test table view"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="elementId" value="black.testTableView"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="QtY-rl-irI" kind="show" id="vRN-05-9mO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O32-PG-bnU" firstAttribute="centerX" secondItem="KMd-hA-6Ij" secondAttribute="centerX" id="QSL-uq-96x"/>
+                            <constraint firstItem="O32-PG-bnU" firstAttribute="centerY" secondItem="KMd-hA-6Ij" secondAttribute="centerY" id="c2r-pg-q2F"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="elementId" value="black.backgroundView"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="KzP-rJ-1bz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIM-B3-dWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="748"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="vI9-Cl-omx">
+            <objects>
+                <viewController id="QtY-rl-irI" customClass="TableViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zuf-pl-NGs"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dpb-Ol-AAt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xvW-Qg-ABY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cAs-N2-Xyk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="28" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="JVg-Lx-dng">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JVg-Lx-dng" id="zDv-JR-hjM">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2J-LZ-s2x">
+                                                    <rect key="frame" x="27" y="11" width="34" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="elementId" value="table.cellTitle"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="S2J-LZ-s2x" firstAttribute="centerY" secondItem="zDv-JR-hjM" secondAttribute="centerY" id="12e-p5-xR5"/>
+                                                <constraint firstItem="S2J-LZ-s2x" firstAttribute="leading" secondItem="zDv-JR-hjM" secondAttribute="leadingMargin" constant="19" id="G4X-Ap-6uX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="elementId" value="table.cell"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="elementId" value="table.tableview"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QtY-rl-irI" id="acR-N3-u7C"/>
+                                    <outlet property="delegate" destination="QtY-rl-irI" id="9ZO-yL-VGU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cAs-N2-Xyk" firstAttribute="top" secondItem="Zuf-pl-NGs" secondAttribute="bottom" constant="-64" id="0WL-Rz-CZm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cAs-N2-Xyk" secondAttribute="trailing" constant="-20" id="R41-BN-BdS"/>
+                            <constraint firstItem="Dpb-Ol-AAt" firstAttribute="top" secondItem="cAs-N2-Xyk" secondAttribute="bottom" id="uX5-sJ-dDZ"/>
+                            <constraint firstItem="cAs-N2-Xyk" firstAttribute="leading" secondItem="xvW-Qg-ABY" secondAttribute="leadingMargin" constant="-20" id="wWY-ef-GV1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rao-pC-vzM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2492" y="748"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QS5-BD-vwA">
@@ -82,14 +191,38 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="IZk-ID-OSu"/>
+                        <segue destination="pA6-xj-WO1" kind="relationship" relationship="viewControllers" id="lvo-og-1nb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZY-Yz-sMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="243" y="267"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aUh-MX-YyF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pA6-xj-WO1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="0rs-WB-GKL">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="elementId" value="tabbar.black"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dqg-8c-K4L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="elementId" value="navbar"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HLv-Z1-mNU" kind="relationship" relationship="rootViewController" id="4ft-gg-xdP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcH-uw-lXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="748"/>
+        </scene>
     </scenes>
-    <resources>
-        <image name="pallete" width="32" height="32"/>
-    </resources>
 </document>

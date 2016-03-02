@@ -17,6 +17,8 @@
 		C32568E01C7FAAFC004F9627 /* INLThemes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C32568DE1C7FAAE7004F9627 /* INLThemes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C32568E51C7FABBF004F9627 /* GreenTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = C32568E41C7FABBF004F9627 /* GreenTheme.plist */; };
 		C365B48C1C85CDB300CB2906 /* RedTheme.json in Resources */ = {isa = PBXBuildFile; fileRef = C365B48B1C85CDB300CB2906 /* RedTheme.json */; };
+		C3B381941C86ED470087F82F /* BlackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B381931C86ED470087F82F /* BlackViewController.swift */; };
+		C3B381961C86EE460087F82F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B381951C86EE460087F82F /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		C32568D91C7FAAE7004F9627 /* INLThemes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = INLThemes.xcodeproj; path = ../../INLThemes/INLThemes.xcodeproj; sourceTree = "<group>"; };
 		C32568E41C7FABBF004F9627 /* GreenTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GreenTheme.plist; sourceTree = "<group>"; };
 		C365B48B1C85CDB300CB2906 /* RedTheme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RedTheme.json; sourceTree = "<group>"; };
+		C3B381931C86ED470087F82F /* BlackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackViewController.swift; sourceTree = "<group>"; };
+		C3B381951C86EE460087F82F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 			children = (
 				C32118FA1C7F229900DFE155 /* AppDelegate.swift */,
 				C32118FC1C7F229900DFE155 /* ViewController.swift */,
+				C3B381931C86ED470087F82F /* BlackViewController.swift */,
+				C3B381951C86EE460087F82F /* TableViewController.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -251,6 +257,8 @@
 			files = (
 				C32118FD1C7F229900DFE155 /* ViewController.swift in Sources */,
 				C32118FB1C7F229900DFE155 /* AppDelegate.swift in Sources */,
+				C3B381941C86ED470087F82F /* BlackViewController.swift in Sources */,
+				C3B381961C86EE460087F82F /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

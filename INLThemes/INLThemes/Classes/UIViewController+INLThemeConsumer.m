@@ -18,6 +18,9 @@
 }
 
 -(void)collectNavbarThemableViewsInto:(NSMutableArray<id<INLThemedView>> *)themedViews {
+	if ([self.navigationController.navigationBar isThemable]) {
+		[themedViews addObject:self.navigationController.navigationBar];
+	}
 	if ([self.navigationItem.titleView isThemable]) {
 		[themedViews addObject:(id)self.navigationItem.titleView];
 	}

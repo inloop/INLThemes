@@ -42,9 +42,16 @@ public class INLThemeService {
 		themeConsumers.forEach { applyTheme(theme, to: $0) }
 	}
 
-	public func applyTheme(theme: INLTheme, to themeConsumer:INLThemeConsumer) {
+	public func applyTheme(theme: INLTheme, to themeConsumer: INLThemeConsumer) {
 
 		applyTheme(theme, toViews: themeConsumer.themedViews())
+	}
+
+	public func applyThemeTo(themeConsumer: INLThemeConsumer) {
+
+		if let currentTheme = self.currentTheme {
+			applyTheme(currentTheme, to: themeConsumer)
+		}
 	}
 
 	func applyTheme(theme: INLTheme, toViews themedViews:[INLThemedView]) {
@@ -71,5 +78,9 @@ public class INLThemeService {
 
 	public class func applyTheme(theme: INLTheme, to themeConsumer:INLThemeConsumer) {
 		sharedService.applyTheme(theme, to: themeConsumer)
+	}
+
+	public class func applyThemeTo(themeConsumer: INLThemeConsumer) {
+		sharedService.applyThemeTo(themeConsumer)
 	}
 }

@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>navbar</key>
+	<dict>
+		<key>barTintColor</key>
+		<string>#88ff88</string>
+		<key>tintColor</key>
+		<string>#008800</string>
+	</dict>
 	<key>tabbar</key>
 	<dict>
 		<key>tintColor</key>
@@ -9,10 +16,19 @@
 		<key>barTintColor</key>
 		<string>#003300</string>
 	</dict>
-	<key>tabbar.firstItem</key>
+	<key>tabbar.main</key>
 	<dict>
+		<key>image</key>
+		<string>pallette2</string>
 		<key>title</key>
 		<string>Green</string>
+	</dict>
+	<key>tabbar.black</key>
+	<dict>
+		<key>image</key>
+		<string>pallette</string>
+		<key>title</key>
+		<string>White</string>
 	</dict>
 	<key>main.backgroundView</key>
 	<dict>
@@ -34,6 +50,12 @@
 	<dict>
 		<key>textColor</key>
 		<string>#00bb11</string>
+		<key>text</key>
+		<string>Blue theme</string>
+		<key>font</key>
+		<string>Papyrus</string>
+		<key>fontSize</key>
+		<integer>15</integer>
 	</dict>
 	<key>main.bottomButton</key>
 	<dict>
@@ -45,6 +67,28 @@
 		<string>#bbbbbb</string>
 		<key>text</key>
 		<string>Green button</string>
+	</dict>
+	<key>black.backgroundView</key>
+	<dict>
+		<key>backgroundColor</key>
+		<string>#dddddd</string>
+	</dict>
+	<key>table.tableview</key>
+	<dict>
+		<key>separatorColor</key>
+		<string>#008800</string>
+		<key>backgroundColor</key>
+		<string>#dddddd</string>
+	</dict>
+	<key>table.cell</key>
+	<dict>
+		<key>selectedBackgroundColor</key>
+		<string>#88ff88</string>
+	</dict>
+	<key>table.cellTitle</key>
+	<dict>
+		<key>textColor</key>
+		<string>#008800</string>
 	</dict>
 </dict>
 </plist>

@@ -60,6 +60,17 @@ extension UILabel {
 }
 
 
+extension UINavigationBar {
+	public override func applyTheme(theme: INLThemeElement) {
+		super.applyTheme(theme)
+
+		if let barTintColor = theme.color("barTintColor") {
+			self.barTintColor = barTintColor
+		}
+	}
+}
+
+
 extension UIPageControl {
 	public override func applyTheme(theme: INLThemeElement) {
 		super.applyTheme(theme)
@@ -80,6 +91,30 @@ extension UITabBar {
 
 		if let barTintColor = theme.color("barTintColor") {
 			self.barTintColor = barTintColor
+		}
+	}
+}
+
+extension UITableView {
+	public override func applyTheme(theme: INLThemeElement) {
+		super.applyTheme(theme)
+
+		if let separatorColor = theme.color("separatorColor") {
+			self.separatorColor = separatorColor;
+		}
+	}
+}
+
+
+extension UITableViewCell {
+	public override func applyTheme(theme: INLThemeElement) {
+		super.applyTheme(theme)
+
+		if let selectedBackgroundColor = theme.color("selectedBackgroundColor") {
+			let backgroundView = UIView(frame: CGRectZero)
+			backgroundView.backgroundColor = selectedBackgroundColor
+			backgroundView.layer.masksToBounds = true
+			self.selectedBackgroundView = backgroundView
 		}
 	}
 }
