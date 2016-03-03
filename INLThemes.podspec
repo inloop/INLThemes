@@ -8,5 +8,5 @@ Pod::Spec.new do |spec|
 	spec.authors      = { 'Tomas Hakel' => 'tomas.hakel@inloop.eu' }
 	spec.summary      = 'An iOS library for supporting multiple UI themes'
 	spec.source       =  { :git => 'https://github.com/inloop/INLThemes.git', :tag => spec.version }
-	spec.source_files = 'INLThemes/INLThemes/*.{h,m,swift}'
+	spec.source_files = 'INLThemes/**/*.{h,m,swift}'
 end
