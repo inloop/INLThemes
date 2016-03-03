@@ -109,7 +109,7 @@ extension UIScrollView {
 	public override func applyTheme(theme: INLThemeElement) {
 		super.applyTheme(theme)
 
-		if let useDarkIndicator = theme.bool(elementId) {
+		if let useDarkIndicator = theme.bool("useDarkIndicator") {
 			self.indicatorStyle = useDarkIndicator ? .Black : .White
 		}
 	}
@@ -125,6 +125,7 @@ extension UITabBar {
 		}
 	}
 }
+
 
 extension UITableView {
 	public override func applyTheme(theme: INLThemeElement) {
@@ -172,7 +173,7 @@ extension UITextField {
 		if let textColor = theme.color("textColor") {
 			self.textColor = textColor
 		}
-		if let inactiveColor = theme.color("inactiveColor"), placeholder = self.placeholder {
+		if let inactiveColor = theme.color("placeholderColor"), placeholder = self.placeholder {
 			self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSForegroundColorAttributeName: inactiveColor])
 		}
 		if let font = theme.font() {

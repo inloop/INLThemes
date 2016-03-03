@@ -77,7 +77,6 @@
 				C39782821C802F8D006372F0 /* UIViewExtensions.swift */,
 				C3ACD9EE1C7D8D9800809570 /* UIViewController+INLThemeConsumer.h */,
 				C3ACD9EF1C7D8D9800809570 /* UIViewController+INLThemeConsumer.m */,
-				C3C8E46C1C7F0F9C00835F56 /* Services */,
 			);
 			name = ThemeModule;
 			sourceTree = "<group>";
@@ -128,19 +127,12 @@
 		C3ACD9DF1C7D8C2D00809570 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C3C8E46D1C7F0FEB00835F56 /* INLAssetService.h */,
+				C3C8E46E1C7F0FEB00835F56 /* INLAssetService.m */,
 				C3ACD9E01C7D8CAF00809570 /* UIColor+Hex.h */,
 				C3ACD9E11C7D8CAF00809570 /* UIColor+Hex.m */,
 			);
 			name = Extensions;
-			sourceTree = "<group>";
-		};
-		C3C8E46C1C7F0F9C00835F56 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				C3C8E46D1C7F0FEB00835F56 /* INLAssetService.h */,
-				C3C8E46E1C7F0FEB00835F56 /* INLAssetService.m */,
-			);
-			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
