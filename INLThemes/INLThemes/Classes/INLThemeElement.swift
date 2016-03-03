@@ -22,7 +22,7 @@ extension INLThemeElement {
 		guard let number = values[elementId] as? NSNumber
 			else { return nil }
 
-		return Double(number)
+		return number.doubleValue
 	}
 
 	public func color(elementId: String) -> UIColor? {
@@ -37,6 +37,13 @@ extension INLThemeElement {
 			else { return nil }
 
 		return INLAssetService.imageNamed(image)
+	}
+
+	public func bool(elementId: String) -> Bool? {
+		guard let number = values[elementId] as? NSNumber
+			else { return nil }
+
+		return number.boolValue
 	}
 
 	public func font() -> UIFont? {

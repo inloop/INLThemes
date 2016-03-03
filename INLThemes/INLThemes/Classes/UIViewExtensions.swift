@@ -32,6 +32,26 @@ extension UIButton {
 }
 
 
+extension UICollectionViewCell {
+	public override func applyTheme(theme: INLThemeElement) {
+		super.applyTheme(theme)
+
+		if let backgroundColor = theme.color("backgroundColor") {
+			let backgroundView = UIView(frame: CGRectZero)
+			backgroundView.backgroundColor = backgroundColor
+			backgroundView.layer.masksToBounds = true
+			self.backgroundView = backgroundView
+		}
+		if let selectedBackgroundColor = theme.color("selectedBackgroundColor") {
+			let backgroundView = UIView(frame: CGRectZero)
+			backgroundView.backgroundColor = selectedBackgroundColor
+			backgroundView.layer.masksToBounds = true
+			self.selectedBackgroundView = backgroundView
+		}
+	}
+}
+
+
 extension UIImageView {
 	public override func applyTheme(theme: INLThemeElement) {
 		super.applyTheme(theme)
@@ -85,6 +105,17 @@ extension UIPageControl {
 }
 
 
+extension UIScrollView {
+	public override func applyTheme(theme: INLThemeElement) {
+		super.applyTheme(theme)
+
+		if let useDarkIndicator = theme.bool(elementId) {
+			self.indicatorStyle = useDarkIndicator ? .Black : .White
+		}
+	}
+}
+
+
 extension UITabBar {
 	public override func applyTheme(theme: INLThemeElement) {
 		super.applyTheme(theme)
@@ -109,6 +140,13 @@ extension UITableView {
 extension UITableViewCell {
 	public override func applyTheme(theme: INLThemeElement) {
 		super.applyTheme(theme)
+
+		if let backgroundColor = theme.color("backgroundColor") {
+			let backgroundView = UIView(frame: CGRectZero)
+			backgroundView.backgroundColor = backgroundColor
+			backgroundView.layer.masksToBounds = true
+			self.backgroundView = backgroundView
+		}
 
 		if let selectedBackgroundColor = theme.color("selectedBackgroundColor") {
 			let backgroundView = UIView(frame: CGRectZero)
