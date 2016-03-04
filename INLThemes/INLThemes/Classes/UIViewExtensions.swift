@@ -115,6 +115,16 @@ extension UIScrollView {
 	}
 }
 
+extension UISwitch {
+	public override func applyTheme(theme: INLThemeElement) {
+		super.applyTheme(theme)
+
+		if let tintColor = theme.color("tintColor") {
+			self.onTintColor = tintColor
+		}
+	}
+}
+
 
 extension UITabBar {
 	public override func applyTheme(theme: INLThemeElement) {

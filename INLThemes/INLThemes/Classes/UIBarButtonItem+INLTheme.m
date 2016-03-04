@@ -29,10 +29,17 @@ synthesizeElementId
 		self.title = title;
 	}
 
+	NSString * selectedImage = [theme valueForKey:@"selectedImage"];
+	if (selectedImage) {
+		self.selectedImage = [INLAssetService imageNamed:selectedImage];
+	}
+
 	NSString * imageSrc = [theme valueForKey:@"image"];
 	if (imageSrc) {
-		self.selectedImage = [INLAssetService imageNamed:imageSrc];
 		self.image = [INLAssetService imageNamed:imageSrc];
+		if (!selectedImage) {
+			self.selectedImage = [INLAssetService imageNamed:imageSrc];
+		}
 	}
 }
 
