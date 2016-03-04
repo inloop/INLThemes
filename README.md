@@ -89,7 +89,7 @@ The following theme attributes are supported:
 **UITextField:** font, fontSize, placeholderColor, placeholder, text, textColor<br>
 **UITextView:** font, fontSize, text, textColor<br>
 **UIBarButtonItem:** color, image<br>
-**UITabBarItem:** image, title<br>
+**UITabBarItem:** image, selectedImage, title<br>
 **NSLayoutConstraint:** active, constant, priority<br>
 
 ## 4. Supporting additional properties
