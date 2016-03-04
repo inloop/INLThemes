@@ -9,7 +9,8 @@
 import Foundation
 
 
-public class INLThemeService {
+@objc
+public class INLThemeService: NSObject {
 
 	public class var sharedService: INLThemeService {
 		struct Static {

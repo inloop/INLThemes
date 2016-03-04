@@ -2,12 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>INLThemeAlias</key>
+	<dict>
+		<key>mainColour</key>
+		<string>#88ff88</string>
+		<key>subColour</key>
+		<string>#008800</string>
+	</dict>
 	<key>navbar</key>
 	<dict>
 		<key>barTintColor</key>
-		<string>#88ff88</string>
+		<string>mainColour</string>
 		<key>tintColor</key>
-		<string>#008800</string>
+		<string>subColour</string>
 	</dict>
 	<key>tabbar</key>
 	<dict>
@@ -81,7 +88,7 @@
 	<key>table.tableview</key>
 	<dict>
 		<key>separatorColor</key>
-		<string>#008800</string>
+		<string>subColour</string>
 		<key>backgroundColor</key>
 		<string>#dddddd</string>
 	</dict>
@@ -93,7 +100,7 @@
 	<key>table.cellTitle</key>
 	<dict>
 		<key>textColor</key>
-		<string>#008800</string>
+		<string>subColour</string>
 	</dict>
 </dict>
 </plist>

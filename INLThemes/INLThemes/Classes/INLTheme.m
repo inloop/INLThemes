@@ -13,10 +13,22 @@
 -(instancetype)initWithThemeDict:(NSDictionary *)themeDict {
 
 	if (self = [super init]) {
+		NSDictionary * aliasDict = themeDict[@"INLThemeAlias"];
+
 		NSMutableDictionary * uiElements = [@{} mutableCopy];
 		for (NSString * elementId in themeDict.keyEnumerator) {
-			uiElements[elementId] = [INLThemeElement elementWithDictionary:themeDict[elementId]];
+			if ([elementId isEqualToString:@"INLThemeAlias"]) {
+				continue;
+			}
+			NSMutableDictionary * values = [themeDict[elementId] mutableCopy];
+			for (NSString * key in [themeDict[elementId] keyEnumerator]) {
+				if ([aliasDict objectForKey:values[key]] != nil) {
+					values[key] = aliasDict[values[key]];
+				}
+			}
+			uiElements[elementId] = [INLThemeElement elementWithDictionary:values];
 		}
+
 		self.uiElements = uiElements;
 	}
 	return self;

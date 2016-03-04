@@ -1,7 +1,12 @@
 {
+	"INLThemeAlias": {
+		"mainColour": "#ff8888",
+		"subColour": "#880000"
+	},
+
 	"navbar": {
-		"tintColor": "#ff8888",
-		"barTintColor": "#880000"
+		"tintColor": "mainColour",
+		"barTintColor": "subColour"
 	},
 
 	"tabbar": {
@@ -47,13 +52,13 @@
 	},
 
 	"table.tableview": {
-		"separatorColor": "#880000",
+		"separatorColor": "subColour",
 		"backgroundColor": "#111111"
 	},
 	"table.cell": {
-		"selectedBackgroundColor": "#ff8888"
+		"selectedBackgroundColor": "mainColour"
 	},
 	"table.cellTitle": {
-		"textColor": "#880000"
+		"textColor": "subColour"
 	}
 }
