@@ -13,7 +13,7 @@
 
 synthesizeElementId
 
--(void)applyTheme:(INLThemeElement *)theme {
+- (void)applyTheme:(INLThemeElement *)theme {
 
 }
 

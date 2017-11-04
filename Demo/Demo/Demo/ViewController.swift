@@ -13,12 +13,12 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-		ThemeService.applyTheme(Theme(plist: "GreenTheme"))
-		ThemeService.registerThemeConsumer(self)
+		ThemeService.apply(Theme(plist: "GreenTheme"))
+        ThemeService.register(self)
 	}
 
 	deinit {
-		ThemeService.removeThemeConsumer(self)
+        ThemeService.remove(self)
 	}
 
 	var i = 0
@@ -33,6 +33,6 @@ class ViewController: UIViewController {
 			}
 		}() as Theme
 
-		ThemeService.applyTheme(theme)
+		ThemeService.apply(theme)
 	}
 }

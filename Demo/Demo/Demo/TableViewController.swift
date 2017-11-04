@@ -13,11 +13,11 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		ThemeService.registerThemeConsumer(self)
+        ThemeService.register(self)
     }
 
 	deinit {
-		ThemeService.removeThemeConsumer(self)
+        ThemeService.remove(self)
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,9 +26,9 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-		let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+		let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-		ThemeService.applyThemeTo(cell)
+        ThemeService.applyTheme(to: cell)
 
 		return cell
 	}

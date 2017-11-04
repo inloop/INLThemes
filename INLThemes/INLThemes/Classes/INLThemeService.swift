@@ -17,65 +17,59 @@ open class ThemeService: NSObject {
 	var themeConsumers = [ThemeConsumer]()
 
 	// MARK: - Register theme consumer
-	open func registerThemeConsumer(_ themeConsumer: ThemeConsumer) {
-
+	open func register(_ themeConsumer: ThemeConsumer) {
 		themeConsumers.append(themeConsumer)
 		if let theme = currentTheme {
-			applyTheme(theme, to: themeConsumer)
+			apply(theme, to: themeConsumer)
 		}
 	}
 
-	open func removeThemeConsumer(_ themeConsumer: ThemeConsumer) {
-
+	open func remove(_ themeConsumer: ThemeConsumer) {
 		themeConsumers = themeConsumers.filter { !$0.isEqual(themeConsumer) }
 	}
 
 	// MARK: - Apply theme
-	open func applyTheme(_ theme: Theme) {
-
-		currentTheme = theme;
-		themeConsumers.forEach { applyTheme(theme, to: $0) }
+	open func apply(_ theme: Theme) {
+		currentTheme = theme
+		themeConsumers.forEach { apply(theme, to: $0) }
 	}
 
-	open func applyTheme(_ theme: Theme, to themeConsumer: ThemeConsumer) {
-
-		applyTheme(theme, toViews: themeConsumer.themedViews())
+	open func apply(_ theme: Theme, to themeConsumer: ThemeConsumer) {
+		apply(theme, toViews: themeConsumer.themedViews())
 	}
 
-	open func applyThemeTo(_ themeConsumer: ThemeConsumer) {
-
+	open func applyTheme(to themeConsumer: ThemeConsumer) {
 		if let currentTheme = self.currentTheme {
-			applyTheme(currentTheme, to: themeConsumer)
+			apply(currentTheme, to: themeConsumer)
 		}
 	}
 
-	func applyTheme(_ theme: Theme, toViews themedViews: [ThemedView]) {
-
+	func apply(_ theme: Theme, toViews themedViews: [ThemedView]) {
 		themedViews.forEach {
 			if let element = theme.uiElements[$0.elementId] {
-				$0.applyTheme(element)
+				$0.apply(element)
 			}
 		}
 	}
 
 	// MARK: - Convinience
-	open class func registerThemeConsumer(_ themeConsumer: ThemeConsumer) {
-		shared.registerThemeConsumer(themeConsumer)
+	open class func register(_ themeConsumer: ThemeConsumer) {
+        shared.register(themeConsumer)
 	}
 
-	open class func removeThemeConsumer(_ themeConsumer: ThemeConsumer) {
-		shared.removeThemeConsumer(themeConsumer)
+	open class func remove(_ themeConsumer: ThemeConsumer) {
+        shared.remove(themeConsumer)
 	}
 
-	open class func applyTheme(_ theme: Theme) {
-		shared.applyTheme(theme)
+	open class func apply(_ theme: Theme) {
+		shared.apply(theme)
 	}
 
-	open class func applyTheme(_ theme: Theme, to themeConsumer: ThemeConsumer) {
-		shared.applyTheme(theme, to: themeConsumer)
+	open class func apply(_ theme: Theme, to themeConsumer: ThemeConsumer) {
+		shared.apply(theme, to: themeConsumer)
 	}
 
-	open class func applyThemeTo(_ themeConsumer: ThemeConsumer) {
-		shared.applyThemeTo(themeConsumer)
+	open class func applyTheme(to themeConsumer: ThemeConsumer) {
+        shared.applyTheme(to: themeConsumer)
 	}
 }

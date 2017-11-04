@@ -10,8 +10,8 @@ import UIKit
 
 
 extension UIButton {
-	open override func applyTheme(_ theme: ThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let color = theme.color("color") {
 			self.imageView?.tintColor = color
@@ -33,8 +33,8 @@ extension UIButton {
 
 
 extension UICollectionViewCell {
-	open override func applyTheme(_ theme: ThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let backgroundColor = theme.color("backgroundColor") {
 			let backgroundView = UIView(frame: .zero)
@@ -53,8 +53,8 @@ extension UICollectionViewCell {
 
 
 extension UIImageView {
-	open override func applyTheme(_ theme: ThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let image = theme.image("image") {
 			self.image = image
@@ -64,8 +64,8 @@ extension UIImageView {
 
 
 extension UILabel {
-	open override func applyTheme(_ theme: ThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let text = theme["text"] {
 			self.text = text
@@ -81,8 +81,8 @@ extension UILabel {
 
 
 extension UINavigationBar {
-	open override func applyTheme(_ theme: ThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let barTintColor = theme.color("barTintColor") {
 			self.barTintColor = barTintColor
@@ -92,8 +92,8 @@ extension UINavigationBar {
 
 
 extension UIPageControl {
-	open override func applyTheme(_ theme: ThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let color = theme.color("color") {
 			self.currentPageIndicatorTintColor = color
@@ -106,8 +106,8 @@ extension UIPageControl {
 
 
 extension UIScrollView {
-	open override func applyTheme(_ theme: ThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let useDarkIndicator = theme.bool("useDarkIndicator") {
 			self.indicatorStyle = useDarkIndicator ? .black : .white
@@ -116,8 +116,8 @@ extension UIScrollView {
 }
 
 extension UISwitch {
-	open override func applyTheme(_ theme: ThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let tintColor = theme.color("tintColor") {
 			self.onTintColor = tintColor
@@ -127,8 +127,8 @@ extension UISwitch {
 
 
 extension UITabBar {
-	open override func applyTheme(_ theme: ThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let barTintColor = theme.color("barTintColor") {
 			self.barTintColor = barTintColor
@@ -138,8 +138,8 @@ extension UITabBar {
 
 
 extension UITableView {
-	open override func applyTheme(_ theme: ThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let separatorColor = theme.color("separatorColor") {
 			self.separatorColor = separatorColor;
@@ -149,8 +149,8 @@ extension UITableView {
 
 
 extension UITableViewCell {
-	open override func applyTheme(_ theme: ThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let backgroundColor = theme.color("backgroundColor") {
 			let backgroundView = UIView(frame: CGRect.zero)
@@ -171,8 +171,8 @@ extension UITableViewCell {
 
 extension UITextField {
 
-	open override func applyTheme(_ theme: ThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let text = theme["text"] {
 			self.text = text
@@ -194,8 +194,8 @@ extension UITextField {
 
 
 extension UITextView {
-	open override func applyTheme(_ theme: ThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let text = theme["text"] {
 			self.text = text

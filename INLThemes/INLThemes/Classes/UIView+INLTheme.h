@@ -15,7 +15,7 @@ NS_SWIFT_NAME(ThemedView)
 
 @property (nonatomic) NSString * __nonnull elementId;
 
-- (void)applyTheme:(INLThemeElement * __nonnull)theme;
+- (void)applyTheme:(INLThemeElement * __nonnull)theme NS_SWIFT_NAME(apply(_:));
 
 @end
 
