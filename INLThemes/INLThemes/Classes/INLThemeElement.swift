@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension INLThemeElement {
+extension ThemeElement {
 
 	public subscript (elementId:String) -> String? {
 		return values[elementId] as? String
@@ -47,7 +47,7 @@ extension INLThemeElement {
 	}
 
 	public func font() -> UIFont? {
-		guard let fontName = self["font"], let fontSize = self.number("fontSize")
+		guard let fontName = self["font"], let fontSize = number("fontSize")
 			else { return nil }
 
 		return UIFont(name: fontName, size: CGFloat(fontSize))

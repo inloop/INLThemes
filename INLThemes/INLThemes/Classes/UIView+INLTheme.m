@@ -15,7 +15,7 @@
 
 synthesizeElementId
 
--(void)applyTheme:(INLThemeElement *)theme {
+- (void)applyTheme:(INLThemeElement *)theme {
 
 	NSString * backgroundColorHex = [theme valueForKey:@"backgroundColor"];
 	if (backgroundColorHex) {
@@ -50,8 +50,7 @@ synthesizeElementId
 
 synthesizeElementId
 
--(void)applyTheme:(INLThemeElement *)theme {
-
+- (void)applyTheme:(INLThemeElement *)theme {
 	NSNumber * active = theme.values[@"active"];
 	if (active) {
 		self.active = [active boolValue];
@@ -73,7 +72,7 @@ synthesizeElementId
 
 @implementation NSObject (INLThemable)
 
--(BOOL)isThemable {
+- (BOOL)isThemable {
 	return [self conformsToProtocol:@protocol(INLThemedView)]
 		&& [(id<INLThemedView>)self elementId] != nil;
 }

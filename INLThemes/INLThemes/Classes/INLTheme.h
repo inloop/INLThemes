@@ -10,14 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(Theme)
 @interface INLTheme : NSObject
 
 @property (strong, nonatomic) NSDictionary<NSString *, INLThemeElement *> * uiElements;
 
-+ (instancetype)themeWithPlist:(NSString * __nonnull)plistName;
-+ (instancetype)themeWithJSONData:(NSData * __nonnull)jsonData;
-+ (instancetype)themeWithJSONFile:(NSString * __nonnull)jsonName;
-+ (instancetype)themeWithJSON:(NSString * __nonnull)json;
++ (instancetype)themeWithPlist:(NSString *)plistName;
++ (instancetype)themeWithJSONData:(NSData *)jsonData;
++ (instancetype)themeWithJSONFile:(NSString *)jsonName;
++ (instancetype)themeWithJSON:(NSString *)json;
 
 @end
 
