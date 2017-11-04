@@ -17,13 +17,13 @@ extension UIButton {
 			self.imageView?.tintColor = color
 		}
 		if let textColor = theme.color("textColor") {
-			self.setTitleColor(textColor, for: UIControlState())
+			self.setTitleColor(textColor, for: .normal)
 		}
 		if let text = theme.string("text") {
-			self.setTitle(text, for: UIControlState())
+			self.setTitle(text, for: .normal)
 		}
 		if let image = theme.image("image") {
-			self.setImage(image, for: UIControlState())
+			self.setImage(image, for: .normal)
 		}
 		if let font = theme.font() {
 			self.titleLabel?.font = font
