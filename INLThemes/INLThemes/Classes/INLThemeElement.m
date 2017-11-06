@@ -9,13 +9,13 @@
 
 @implementation INLThemeElement
 
-+(instancetype)elementWithDictionary:(NSDictionary *)dict {
++ (instancetype)elementWithDictionary:(NSDictionary *)dict {
 	INLThemeElement * element = [[INLThemeElement alloc] init];
 	element.values = dict;
 	return element;
 }
 
--(NSString *)valueForKey:(NSString *)key {
+- (NSString *)valueForKey:(NSString *)key {
 	return self.values[key];
 }
 

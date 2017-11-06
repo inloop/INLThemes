@@ -12,24 +12,27 @@ import INLThemes
 class ViewController: UIViewController {
 
 	override func viewDidLoad() {
-		INLThemeService.applyTheme(INLTheme(plist: "GreenTheme"))
-		INLThemeService.registerThemeConsumer(self)
+        super.viewDidLoad()
+		ThemeService.apply(Theme(plist: "GreenTheme"))
+        ThemeService.register(self)
 	}
 
 	deinit {
-		INLThemeService.removeThemeConsumer(self)
+        ThemeService.remove(self)
 	}
 
 	var i = 0
+    
 	@IBAction func changeThemeButton() {
 		let theme = {
-			switch self.i++ % 3 {
-			case 0: return INLTheme(plist: "BlueTheme")
-			case 1: return INLTheme(JSONFile: "RedTheme")
-			default: return INLTheme(plist: "GreenTheme")
+            i += 1
+			switch i % 3 {
+			case 0: return Theme(plist: "BlueTheme")
+			case 1: return Theme(jsonFile: "RedTheme")
+			default: return Theme(plist: "GreenTheme")
 			}
-		}() as INLTheme
+		}() as Theme
 
-		INLThemeService.applyTheme(theme)
+		ThemeService.apply(theme)
 	}
 }

@@ -10,20 +10,20 @@ import UIKit
 
 
 extension UIButton {
-	public override func applyTheme(theme: INLThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let color = theme.color("color") {
 			self.imageView?.tintColor = color
 		}
 		if let textColor = theme.color("textColor") {
-			self.setTitleColor(textColor, forState: .Normal)
+			self.setTitleColor(textColor, for: .normal)
 		}
 		if let text = theme.string("text") {
-			self.setTitle(text, forState: .Normal)
+			self.setTitle(text, for: .normal)
 		}
 		if let image = theme.image("image") {
-			self.setImage(image, forState: .Normal)
+			self.setImage(image, for: .normal)
 		}
 		if let font = theme.font() {
 			self.titleLabel?.font = font
@@ -33,17 +33,17 @@ extension UIButton {
 
 
 extension UICollectionViewCell {
-	public override func applyTheme(theme: INLThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let backgroundColor = theme.color("backgroundColor") {
-			let backgroundView = UIView(frame: CGRectZero)
+			let backgroundView = UIView(frame: .zero)
 			backgroundView.backgroundColor = backgroundColor
 			backgroundView.layer.masksToBounds = true
 			self.backgroundView = backgroundView
 		}
 		if let selectedBackgroundColor = theme.color("selectedBackgroundColor") {
-			let backgroundView = UIView(frame: CGRectZero)
+			let backgroundView = UIView(frame: .zero)
 			backgroundView.backgroundColor = selectedBackgroundColor
 			backgroundView.layer.masksToBounds = true
 			self.selectedBackgroundView = backgroundView
@@ -53,8 +53,8 @@ extension UICollectionViewCell {
 
 
 extension UIImageView {
-	public override func applyTheme(theme: INLThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let image = theme.image("image") {
 			self.image = image
@@ -64,8 +64,8 @@ extension UIImageView {
 
 
 extension UILabel {
-	public override func applyTheme(theme: INLThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let text = theme["text"] {
 			self.text = text
@@ -81,8 +81,8 @@ extension UILabel {
 
 
 extension UINavigationBar {
-	public override func applyTheme(theme: INLThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let barTintColor = theme.color("barTintColor") {
 			self.barTintColor = barTintColor
@@ -92,8 +92,8 @@ extension UINavigationBar {
 
 
 extension UIPageControl {
-	public override func applyTheme(theme: INLThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let color = theme.color("color") {
 			self.currentPageIndicatorTintColor = color
@@ -106,18 +106,18 @@ extension UIPageControl {
 
 
 extension UIScrollView {
-	public override func applyTheme(theme: INLThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let useDarkIndicator = theme.bool("useDarkIndicator") {
-			self.indicatorStyle = useDarkIndicator ? .Black : .White
+			self.indicatorStyle = useDarkIndicator ? .black : .white
 		}
 	}
 }
 
 extension UISwitch {
-	public override func applyTheme(theme: INLThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let tintColor = theme.color("tintColor") {
 			self.onTintColor = tintColor
@@ -127,8 +127,8 @@ extension UISwitch {
 
 
 extension UITabBar {
-	public override func applyTheme(theme: INLThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let barTintColor = theme.color("barTintColor") {
 			self.barTintColor = barTintColor
@@ -138,8 +138,8 @@ extension UITabBar {
 
 
 extension UITableView {
-	public override func applyTheme(theme: INLThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let separatorColor = theme.color("separatorColor") {
 			self.separatorColor = separatorColor;
@@ -149,18 +149,18 @@ extension UITableView {
 
 
 extension UITableViewCell {
-	public override func applyTheme(theme: INLThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let backgroundColor = theme.color("backgroundColor") {
-			let backgroundView = UIView(frame: CGRectZero)
+			let backgroundView = UIView(frame: CGRect.zero)
 			backgroundView.backgroundColor = backgroundColor
 			backgroundView.layer.masksToBounds = true
 			self.backgroundView = backgroundView
 		}
 
 		if let selectedBackgroundColor = theme.color("selectedBackgroundColor") {
-			let backgroundView = UIView(frame: CGRectZero)
+			let backgroundView = UIView(frame: CGRect.zero)
 			backgroundView.backgroundColor = selectedBackgroundColor
 			backgroundView.layer.masksToBounds = true
 			self.selectedBackgroundView = backgroundView
@@ -171,8 +171,8 @@ extension UITableViewCell {
 
 extension UITextField {
 
-	public override func applyTheme(theme: INLThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let text = theme["text"] {
 			self.text = text
@@ -183,8 +183,8 @@ extension UITextField {
 		if let textColor = theme.color("textColor") {
 			self.textColor = textColor
 		}
-		if let inactiveColor = theme.color("placeholderColor"), placeholder = self.placeholder {
-			self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSForegroundColorAttributeName: inactiveColor])
+		if let inactiveColor = theme.color("placeholderColor"), let placeholder = self.placeholder {
+			self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedStringKey.foregroundColor: inactiveColor])
 		}
 		if let font = theme.font() {
 			self.font = font
@@ -194,8 +194,8 @@ extension UITextField {
 
 
 extension UITextView {
-	public override func applyTheme(theme: INLThemeElement) {
-		super.applyTheme(theme)
+	open override func apply(_ theme: ThemeElement) {
+		super.apply(theme)
 
 		if let text = theme["text"] {
 			self.text = text

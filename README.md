@@ -14,24 +14,24 @@ First `import INLThemes`.
 
 You can create a theme with the name of your configuration file and then apply it to the application.
 ```
-let theme = INLTheme(plist: “MyTheme")
-INLThemeService.applyTheme(theme)
+let theme = Theme(plist: “MyTheme")
+ThemeService.apply(theme)
 ```
 
-For views that are created dynamically (e.g. `UITableViewCell`) use the `applyThemeTo()` method when creating them.
+For views that are created dynamically (e.g. `UITableViewCell`) use the `applyTheme(to:)` method when creating them.
 ```
-INLThemeService.applyThemeTo(newView)
+ThemeService.applyTheme(to: newView)
 ```
 
 ### 2.3 Register your view controllers
 ```
 override func viewDidLoad() {
     super.viewDidLoad()
-    INLThemeService.registerThemeConsumer(self)
+    ThemeService.register(self)
 }
 
 deinit {
-    INLThemeService.removeThemeConsumer(self)
+    ThemeService.remove(self)
 }
 ```
 This will automatically apply the theme when it changes. It can be done before or after applying the theme. You can also register a `UIView` (e.g. if you can’t subclass a view controller).
@@ -94,4 +94,4 @@ The following theme attributes are supported:
 
 ## 4. Supporting additional properties
 
-If the framework does not support an attribute you’d like to configure or you’d like to use the library for your custom properties, you can override the `applyTheme` method in a subclass. If the object is not a subclass of `UIView`, `UIBarItem` or `NSLayoutConstraint` your class needs to conform to the `INLThemedView` protocol.
+If the framework does not support an attribute you’d like to configure or you’d like to use the library for your custom properties, you can override the `apply` method in a subclass. If the object is not a subclass of `UIView`, `UIBarItem` or `NSLayoutConstraint` your class needs to conform to the `ThemedView` protocol.

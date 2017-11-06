@@ -13,7 +13,7 @@
 
 synthesizeElementId
 
--(void)applyTheme:(INLThemeElement *)theme {
+- (void)applyTheme:(INLThemeElement *)theme {
 
 }
 
@@ -22,8 +22,7 @@ synthesizeElementId
 
 @implementation UITabBarItem (INLTheme)
 
--(void)applyTheme:(INLThemeElement *)theme {
-
+- (void)applyTheme:(INLThemeElement *)theme {
 	NSString * title = [theme valueForKey:@"title"];
 	if (title) {
 		self.title = title;
@@ -56,7 +55,7 @@ synthesizeElementId
 	objc_setAssociatedObject(self, @selector(hasThemeGeneratedCustomView), hasCustomView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
--(void)applyTheme:(INLThemeElement *)theme {
+- (void)applyTheme:(INLThemeElement *)theme {
 	if ([self.customView conformsToProtocol:@protocol(INLThemedView)]) {
 		[((id<INLThemedView>)self.customView) applyTheme:theme];
 	}

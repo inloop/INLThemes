@@ -10,8 +10,7 @@
 
 @implementation INLTheme
 
--(instancetype)initWithThemeDict:(NSDictionary *)themeDict {
-
+- (instancetype)initWithThemeDict:(NSDictionary *)themeDict {
 	if (self = [super init]) {
 		NSDictionary * aliasDict = themeDict[@"INLThemeAlias"];
 
@@ -34,8 +33,7 @@
 	return self;
 }
 
-+(instancetype)themeWithPlist:(NSString *)plistName {
-
++ (instancetype)themeWithPlist:(NSString *)plistName {
 	NSDictionary * themeDict = nil;
 	NSString * plistPath = [[NSBundle mainBundle] pathForResource:plistName ofType:@"plist"];
 	if (plistPath) {
@@ -44,20 +42,17 @@
 	return [[INLTheme alloc] initWithThemeDict:themeDict];
 }
 
-+(instancetype)themeWithJSONData:(NSData *)jsonData {
-
++ (instancetype)themeWithJSONData:(NSData *)jsonData {
 	NSDictionary * themeDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
 	return [[INLTheme alloc] initWithThemeDict:themeDict];
 }
 
-+(instancetype)themeWithJSONFile:(NSString *)jsonName {
-
++ (instancetype)themeWithJSONFile:(NSString *)jsonName {
 	NSString * jsonPath = [[NSBundle mainBundle] pathForResource:jsonName ofType:@"json"];
 	return [self themeWithJSONData:[NSData dataWithContentsOfFile:jsonPath]];
 }
 
-+(instancetype)themeWithJSON:(NSString *)json {
-
++ (instancetype)themeWithJSON:(NSString *)json {
 	return [self themeWithJSONData:[json dataUsingEncoding:NSUTF8StringEncoding]];
 }
 

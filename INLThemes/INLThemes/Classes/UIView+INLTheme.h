@@ -10,11 +10,12 @@
 #import "INLThemeElement.h"
 
 
+NS_SWIFT_NAME(ThemedView)
 @protocol INLThemedView <NSObject>
 
 @property (nonatomic) NSString * __nonnull elementId;
 
--(void)applyTheme:(INLThemeElement * __nonnull)theme;
+- (void)applyTheme:(INLThemeElement * __nonnull)theme NS_SWIFT_NAME(apply(_:));
 
 @end
 
@@ -28,7 +29,7 @@
 
 @interface NSObject (INLThemable)
 
--(BOOL)isThemable;
+- (BOOL)isThemable;
 
 @end
 
